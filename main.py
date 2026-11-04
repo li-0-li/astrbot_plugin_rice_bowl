@@ -476,7 +476,7 @@ async def report(api_key: str, api_base: str = _DEFAULT_BASE,
 
 # ---------------- 插件 ----------------
 
-@register(PLUGIN_NAME, "li-0-li", "大肥鱼的白饭碗：把 DeepSeek 余额换算成几碗饭或几杯奶茶，并记进账/消费流水", "0.2.0")
+@register(PLUGIN_NAME, "li-0-li", "大肥鱼的白饭碗：把 DeepSeek 余额换算成几碗饭或几杯奶茶，并记进账/消费流水", "0.2.1")
 class RiceBowlPlugin(Star):
     def __init__(self, context: Context, config: AstrBotConfig):
         super().__init__(context)

@@ -3,6 +3,6 @@ display_name: 大肥鱼的白饭碗
 desc: 把 DeepSeek 账户余额换算成一碗一碗的口粮，顺带记进账和消费流水。量词、名称、单价都能自己改，默认一碗白米饭 0.5 元。
 astrbot_version: ">=4.16,<5"
 short_desc: 把 DeepSeek 余额换算成几碗饭，并记进账和消费流水
-version: 0.2.0
+version: 0.2.1
 author: li-0-li
 repo: https://github.com/li-0-li/astrbot_plugin_rice_bowl
