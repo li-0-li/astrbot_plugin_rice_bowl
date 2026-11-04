@@ -30,7 +30,7 @@ from astrbot.api.provider import ProviderRequest
 from astrbot.api.star import Context, Star, register
 from astrbot.core.config.astrbot_config import AstrBotConfig
 
-PLUGIN_NAME = "astrbot_plugin_rice_bowl"
+PLUGIN_NAME = "astrbot_plugin_fatfish_rice"
 _KEY_RE = re.compile(r"sk-[A-Za-z0-9_\-]{20,}")
 _DEFAULT_BASE = "https://api.deepseek.com"
 _BALANCE_PATH = "/user/balance"
@@ -49,7 +49,7 @@ _START_DELAY = 45.0      # 首次采样延迟，别和启动抢资源
 
 def _log(msg: str) -> None:
     try:
-        logger.info("[rice_bowl] %s", msg)
+        logger.info("[fatfish_rice] %s", msg)
     except Exception:  # noqa: BLE001
         pass
 
@@ -476,7 +476,7 @@ async def report(api_key: str, api_base: str = _DEFAULT_BASE,
 
 # ---------------- 插件 ----------------
 
-@register(PLUGIN_NAME, "li-0-li", "大肥鱼的白饭碗：把 DeepSeek 余额换算成几碗饭或几杯奶茶，并记进账/消费流水", "0.2.1")
+@register(PLUGIN_NAME, "li-0-li", "大肥鱼的白饭：把 DeepSeek 余额换算成几碗饭或几杯奶茶，并记进账/消费流水", "0.0.1")
 class RiceBowlPlugin(Star):
     def __init__(self, context: Context, config: AstrBotConfig):
         super().__init__(context)

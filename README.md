@@ -1,4 +1,4 @@
-# 大肥鱼的白饭碗
+# 大肥鱼的白饭
 
 把 DeepSeek 账户余额换算成一份一份的口粮，顺带记进账和消费流水。
 
@@ -24,17 +24,17 @@
 
 ## 安装
 
-在 AstrBot 插件市场搜「大肥鱼的白饭碗」，或者命令行：
+在 AstrBot 插件市场搜「大肥鱼的白饭」，或者命令行：
 
 ```bash
 cd AstrBot/data/plugins
-git clone https://github.com/li-0-li/astrbot_plugin_rice_bowl
+git clone https://github.com/li-0-li/astrbot_plugin_fatfish_rice
 ```
 
 装完在 AstrBot 插件页点重载。日志里出现下面这行就说明活了：
 
 ```
-[rice_bowl] 后台采样已启动，间隔 600 秒，单位=一碗白米饭 0.50 元，key=sk-xxx...abcd，base=https://api.deepseek.com
+[fatfish_rice] 后台采样已启动，间隔 600 秒，单位=一碗白米饭 0.50 元，key=sk-xxx...abcd，base=https://api.deepseek.com
 ```
 
 ## 需要什么
@@ -82,7 +82,7 @@ git clone https://github.com/li-0-li/astrbot_plugin_rice_bowl
 ## 数据在哪
 
 ```text
-data/plugin_data/astrbot_plugin_rice_bowl/
+data/plugin_data/astrbot_plugin_fatfish_rice/
 ├── rice_ledger.jsonl        流水，一行一条，只追加
 └── rice_ledger_state.json   基线（上一次采样到的余额与时间）
 ```
@@ -113,7 +113,7 @@ data/plugin_data/astrbot_plugin_rice_bowl/
 
 ## 卸载
 
-删掉 `data/plugins/astrbot_plugin_rice_bowl` 目录，再删 `data/plugin_data/astrbot_plugin_rice_bowl`（流水在里面）。配置项在 `data/config/astrbot_plugin_rice_bowl_config.json`。三处删干净就完全回滚。
+删掉 `data/plugins/astrbot_plugin_fatfish_rice` 目录，再删 `data/plugin_data/astrbot_plugin_fatfish_rice`（流水在里面）。配置项在 `data/config/astrbot_plugin_fatfish_rice_config.json`。三处删干净就完全回滚。
 
 ## License
 
