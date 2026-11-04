@@ -1,0 +1,58 @@
+{
+  "enable": {
+    "type": "bool",
+    "description": "启用",
+    "hint": "关掉之后工具和命令都不响应，但后台采样还在跑（想彻底停就一起关 enable_sampler）。",
+    "default": true
+  },
+  "unit_measure": {
+    "type": "string",
+    "description": "量词",
+    "hint": "数字后面跟的那个字。默认「碗」。想换成奶茶填「杯」，换成糖填「颗」，换成面包填「片」。",
+    "default": "碗"
+  },
+  "unit_name": {
+    "type": "string",
+    "description": "计价物的名称",
+    "hint": "默认「白米饭」。配合量词会念成「还剩 22 碗白米饭」。填「奶茶」就是「还剩 22 杯奶茶」。留空则只说量词。",
+    "default": "白米饭"
+  },
+  "unit_price": {
+    "type": "float",
+    "description": "一份合多少元",
+    "hint": "默认 0.5，也就是两碗一块钱。余额除以这个数就是还剩几份。填奶茶就填一杯奶茶的价钱。",
+    "default": 0.5
+  },
+  "api_key": {
+    "type": "string",
+    "description": "DeepSeek API Key",
+    "hint": "填 sk- 开头的那串。留空的话，插件会自己去「模型提供商」里找已经配好的 DeepSeek Key 复用，正常情况下什么都不用填。要换另一个账号、或者用中转站时，才需要填这里。",
+    "obvious_hint": true,
+    "secret": true,
+    "default": ""
+  },
+  "api_base": {
+    "type": "string",
+    "description": "余额接口地址",
+    "hint": "默认 https://api.deepseek.com。只有在用中转或自建站时才改，填到域名那一层就行，插件自己会拼 /user/balance。",
+    "default": ""
+  },
+  "enable_sampler": {
+    "type": "bool",
+    "description": "后台定时采样余额并记账",
+    "hint": "关掉之后就没有进账/消费流水了，只剩「还剩几份」。",
+    "default": true
+  },
+  "sample_interval": {
+    "type": "int",
+    "description": "后台采样间隔（秒）",
+    "hint": "最小 60。默认 600，也就是十分钟一次。",
+    "default": 600
+  },
+  "api_timeout": {
+    "type": "int",
+    "description": "查余额的请求超时（秒）",
+    "hint": "默认 12。网络差可以调大，别调太小否则容易误报失败。",
+    "default": 12
+  }
+}

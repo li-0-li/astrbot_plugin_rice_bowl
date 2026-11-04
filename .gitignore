@@ -1,0 +1,18 @@
+__pycache__/
+*.py[cod]
+*.so
+
+# 本地备份（改配置/改代码时留下的）
+*.bak
+*.bak_*
+*.bak-*
+
+# 编辑器
+.vscode/
+.idea/
+*.swp
+.DS_Store
+
+# 本地虚拟环境
+.venv/
+venv/
